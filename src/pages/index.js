@@ -2,7 +2,7 @@ import React from "react";
 import theme from "theme";
 import { Theme, Link, Text, Box, Input, Button, Image, Strong, Icon } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Section, Override, StackItem, Stack, Formspree } from "@quarkly/components";
+import { Override, Section, StackItem, Stack, Formspree } from "@quarkly/components";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 export default (() => {
@@ -18,6 +18,7 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		<Section height="30px">
+			<Override slot="SectionContent" />
 			<Box
 				display="flex"
 				padding="12px 0"
@@ -98,6 +99,7 @@ export default (() => {
 			<Section color="--light" padding="100px 150px 70px 0" sm-padding="40px 0" position="relative">
 				<Stack>
 					<StackItem width="50%" md-width="100%">
+						<Override slot="StackItemContent" />
 						<Text font="46px --fontFamily-googleOswald" padding="30px 0px 0px 100px" text-align="center">
 							Вам требуется юридическая помощь?
 						</Text>
@@ -112,29 +114,40 @@ export default (() => {
 						border-style="double"
 						width="330px"
 						border-color="#fe982a"
+						position="fixed"
+						bottom="auto"
+						left="auto"
+						right="189px"
+						top="160px"
 					>
-						<Text as="h3" font="normal 500 34px/1.2 --fontFamily-googlePlayfairDisplay" margin="0 0 20px 0" text-align="center">
+						<Text
+							as="h3"
+							font="normal 500 34px/1.2 --fontFamily-googlePlayfairDisplay"
+							margin="0 0 20px 0"
+							text-align="center"
+							color="--dark"
+						>
 							Свяжитесь с нами!
 						</Text>
 						<Formspree endpoint="https://formspree.io/f/mgeplyzz">
 							<Stack gap="16px">
 								<StackItem width="100%">
 									<Override slot="StackItemContent" flex-direction="column" />
-									<Text font="normal 400 16px/1.5 --fontFamily-googleOswald" margin="0 0 4px 0">
+									<Text font="normal 400 16px/1.5 --fontFamily-googleOswald" margin="0 0 4px 0" color="--dark">
 										ФИО
 									</Text>
 									<Input width="100%" name="name" />
 								</StackItem>
 								<StackItem width="100%">
 									<Override slot="StackItemContent" flex-direction="column" />
-									<Text font="normal 4600 16px/1.5 --fontFamily-googleOswald" margin="0 0 4px 0">
+									<Text font="normal 400 16px/1.5 --fontFamily-googleOswald" margin="0 0 4px 0" color="--dark">
 										Телефон
 									</Text>
 									<Input width="100%" type="email" name="email" />
 								</StackItem>
 								<StackItem width="100%">
 									<Override slot="StackItemContent" flex-direction="column" />
-									<Text font="normal 400 16px/1.5 --fontFamily-googleOswald" margin="0 0 4px 0">
+									<Text font="normal 400 16px/1.5 --fontFamily-googleOswald" margin="0 0 4px 0" color="--dark">
 										Почта
 									</Text>
 									<Input width="100%" type="email" name="email" />
@@ -156,7 +169,7 @@ export default (() => {
 						</Formspree>
 					</Box>
 				</Stack>
-				<Text font="normal 24px --fontFamily-googleOswald" padding="200px 0px 100px 150px" width="500px">
+				<Text font="normal 24px --fontFamily-googleOswald" padding="200px 0px 100px 150px" width="500px" sm-font="normal 10px --fontFamily-googleOswald">
 					Наши специалисты могут Вам помочь!
 				</Text>
 			</Section>
@@ -210,7 +223,7 @@ export default (() => {
 						background="--color-light url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/4.png?v=2020-11-29T18:40:52.254Z) center center/100% no-repeat"
 						padding="0px 0px 60% 1px"
 						height="0px"
-						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/01.png?v=2020-12-02T14:48:13.688Z) center center/110% no-repeat"
+						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/1_1.png?v=2020-12-04T05:21:15.891Z) center center/110% no-repeat"
 						transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 						border-width="0px"
 						border-radius="px"
@@ -233,7 +246,7 @@ export default (() => {
 						background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/5.png?v=2020-11-29T18:44:57.933Z) center center/100% no-repeat"
 						padding="0px 0px 60% 0px"
 						height="0px"
-						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/02.png?v=2020-12-02T15:00:19.319Z) center center/110% no-repeat"
+						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/1_2.png?v=2020-12-04T05:25:08.794Z) center center/110% no-repeat"
 						transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 					/>
 				</StackItem>
@@ -250,7 +263,7 @@ export default (() => {
 						background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/6.png?v=2020-11-29T18:45:11.642Z) center center/100% no-repeat"
 						padding="0px 0px 60% 0px"
 						height="0px"
-						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/03.png?v=2020-12-02T15:00:48.444Z) center center/110% no-repeat"
+						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/1_31.png?v=2020-12-04T05:29:49.201Z) center center/110% no-repeat"
 						transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 					/>
 					{"    "}
@@ -268,7 +281,7 @@ export default (() => {
 						background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/7.png?v=2020-11-29T18:45:26.353Z) center center/100% no-repeat"
 						padding="0px 0px 60% 0px"
 						height="0px"
-						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/04.png?v=2020-12-02T15:01:03.089Z) center center/110% no-repeat"
+						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/1_4.png?v=2020-12-04T05:33:04.196Z) center center/110% no-repeat"
 						transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 					/>
 					{"    "}
@@ -286,7 +299,7 @@ export default (() => {
 						background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/8.png?v=2020-11-29T18:45:38.497Z) center center/100% no-repeat"
 						padding="0px 0px 60% 0px"
 						height="0px"
-						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/05.png?v=2020-12-02T15:01:27.291Z) center center/110% no-repeat"
+						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/1_5.png?v=2020-12-04T05:35:22.221Z) center center/110% no-repeat"
 						transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 					/>
 				</StackItem>
@@ -303,7 +316,7 @@ export default (() => {
 						background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/9.png?v=2020-11-29T18:45:52.494Z) center center/100% no-repeat"
 						padding="0px 0px 60% 0px"
 						height="0px"
-						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/06.png?v=2020-12-02T15:01:45.614Z) center center/110% no-repeat"
+						hover-background="--color-lightD2 url(https://uploads.quarkly.io/5fc0b4b179530b001fd2cf31/images/16.png?v=2020-12-04T05:17:30.008Z) center center/110% no-repeat"
 						transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 					/>
 					{"    "}
